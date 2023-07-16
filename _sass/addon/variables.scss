@@ -3,7 +3,20 @@
  */
 
 /* sidebar */
-
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 $sidebar-width: 260px !default; /* the basic width */
 $sidebar-width-large: 300px !default; /* screen width: >= 1650px */
 
@@ -23,5 +36,7 @@ $code-font-size: 0.85rem !default;
 
 /* fonts */
 
-$font-family-base: 'Do Hyeon', 'Source Sans Pro', 'Microsoft Yahei', sans-serif;
-$font-family-heading: 'Nanum Gothic', 'Microsoft Yahei', sans-serif;
+$font-family-base: 'SUITE-Regular', 'Do Hyeon', 'Source Sans Pro',
+  'Microsoft Yahei', sans-serif;
+$font-family-heading: 'LINESeedKR-Bd', 'Nanum Gothic', 'Microsoft Yahei',
+  sans-serif;
