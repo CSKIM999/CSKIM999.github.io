@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Effective Typescript 스터디 3주차 (Item 10 ~ 15)
+title: Effective Typescript 스터디 3주차 (Item 11 ~ 15)
 date: 2023-07-01 20:34 +0900
 description: Typescript Study
 category: [Study, Effective TypeScript]
@@ -335,7 +335,7 @@ type Options2 = typeof INIT_OPTIONS
 
 사실… 이것도 앞선 keyof 와 똑같습니다. Options 와 같은 interface 를 생성하고싶을 때. 그냥 고생고생하면서 하나하나 작성하지 말고 typeof 쓰면 한줄만에 간결하게 구현할 수 있습니다.
 
-## 결론
+### 결론
 
 TS 의 타입에도 DRY 원칙은 적용되어야 합니다.
 
@@ -385,7 +385,7 @@ P 86의 예제만 보더라도 이미 속성이 명확한 경우엔 인덱스 �
 
 그 경우에 비록 불완전한 타입선언이지만 타입선언이 필요할 때 사용하는 것이 인덱스 시그니처라고 할 수 있겠습니다.
 
-## 결론
+### 결론
 
 이 아이템에서는 선택변수와 같이 인덱스 시그니처를 우회하는 여러가지 스킬들을 알려줍니다.
 
