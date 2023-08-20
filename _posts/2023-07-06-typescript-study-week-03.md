@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Effective Typescript 스터디 3주차 (Item 11 ~ 15)
-date: 2023-07-01 20:34 +0900
+date: 2023-07-06 20:34 +0900
 description: Typescript Study
 category: [Study, Effective TypeScript]
 tags: Effective-Typescript
