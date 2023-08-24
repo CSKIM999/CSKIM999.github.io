@@ -25,10 +25,8 @@ image:
 또한 알다시피 런타임까지 객체의 타입을 알 수 없을때만 인덱스 시그니처 사용을 제안했었습니다.
 
 ### JS 는 과할정도로 느슨한 언어다
-
 ```tsx
-// {1:2,3:4} => {"1":2,"3":4}
-
+{1:2,3:4} => {"1":2,"3":4}
 let x = {}
 x[[1,2,3]]= 2
 Object.keys(x) = ["1,2,3"]
@@ -42,15 +40,15 @@ TS에서 Key값에 number를 지정하는것은 완전 순수 TS 문법에 속�
 
 ```tsx
 type alpha = {
-	[n:number|string]:string
+    [n:number|string]:string
 }
 
 const test:alpha ={
-	1:'a',
-	2:'b',
-	3:'c',
-	"1":'d'
-	// 여기서 에러는 Type 에러가 아닌 Same name 에러가 발생한다! ㅋㅋ
+    1:'a',
+    2:'b',
+    3:'c',
+    "1":'d'
+    // 여기서 에러는 Type 에러가 아닌 Same name 에러가 발생한다! ㅋㅋ
 }
 ```
 
@@ -75,8 +73,8 @@ Typescript 에서 그런 타입에 사용할 수 있는 기능이 바로 readonl
 
 C# 개발자가 만든 언어 아니랄까봐 C# 에서도 사용되는 개념으로 알고 있는데, 이 Item 에서는 주로 JS 를 많이 접해왔을 우리에게 어떤 상황에서 readonly 를 사용하면 좋을 지 간략하게 설명해줍니다.
 
-`🙄 사실 이번 챕터에선 바뀌면 안되는 내용이 바뀌는 경우에 대해서 구구절절 예시를 들어주며 설명한다.`    
-`바뀌면 안되는 내용이 바뀌면 당연히 곤란하지… 이걸 왜 이렇게 구구절절 예시까지 들어주는지는 좀 의아하다`
+🙄 사실 이번 챕터에선 바뀌면 안되는 내용이 바뀌는 경우에 대해서 구구절절 예시를 들어주며 설명한다.      
+바뀌면 안되는 내용이 바뀌면 당연히 곤란하지… 이걸 왜 이렇게 구구절절 예시까지 들어주는지는 좀 의아하다.
 
 ### const 와 readonly 의 차이 ?
 
@@ -95,32 +93,26 @@ Item에선 다루지 않으나 요약 부분에서 나온 키워드인데 생각
     
     ```tsx
     let foo: {
-        readonly bar: number;
-    } = {
-            bar: 123
-        };
-    
+    readonly bar: number;
+      } = {
+        bar: 123,
+      };
+
     function iMutateFoo(foo: { bar: number }) {
         foo.bar = 456;
     }
-    
-    iMutateFoo(foo)
+
+    iMutateFoo(foo);
     console.log(foo.bar); // 456!
     ```
     
     ```tsx
-    interface Foo {
-        readonly bar: number;
-    }
-    let foo: Foo = {
-        bar: 123
-    };
-    
+    interface Foo {readonly bar: number;}
+    let foo: Foo = {bar: 123};
     function iTakeFoo(foo: Foo) {
         foo.bar = 456; 
-    		// error ! : bar 는 readonly
+    	// error ! : bar 는 readonly
     }
-    
     iTakeFoo(foo);
     ```
     
@@ -148,7 +140,7 @@ readonly 는 [ 내가 ] 속성을 변경하지 못함은 보장하지만, 객체
 ### 결론 . . . ?
 이 Item 에서 거의 대부분의 내용이 예제를 속성이 동적을 바뀌는 경우에 대해서 설명하고 있습니다.
 
-`Component Prop 에서 속성이 추가될 때 마다 Interface 의 값을 바꿔줘야 하는 것은 너무 비효율적이다.`
+Component Prop 에서 속성이 추가될 때 마다 Interface 의 값을 바꿔줘야 하는 것은 너무 비효율적이다.
 
 라는 내용인데 결론은 그 경우엔 인덱스 시그니처에 타입 연산(keyof)을 섞어서 매번 추가하고 체크하는 그 비효율을 줄이라고 가이드 해줍니다.
 
@@ -166,7 +158,7 @@ Typescript 의 타입 추론 기능은 **정말정말** 강력합니다. 실제�
 
 실제로 세어보면 몇몇 내가 구현한 객체들 빼고 일반적으로 사용하는 함수나 라이브러리들은 타입을 굳이 설정하지 않아도 어디서 알아왔는지 모를 요상한 타입들이 이미 추론 되어 있는 것을 볼 수 있습니다.
 
-`‘추론을 안시켜도 하도 잘해줘서 딱히 js 쓸 때랑 엄청나게 많이 까다로운 것 같진 않은데, 내가 잘 못 쓰고있는건가?’`
+‘추론을 안시켜도 하도 잘해줘서 딱히 js 쓸 때랑 엄청나게 많이 까다로운 것 같진 않은데, 내가 잘 못 쓰고있는건가?’
 
 최근 사용하며 많이 드는 생각이었는데 마침 잘 만난 Item이라는 생각이 들었습니다.
 
