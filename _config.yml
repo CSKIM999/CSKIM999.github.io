@@ -20,13 +20,14 @@ timezone: Asia/Seoul
 
 title: CSKIM의 둥지 # the main title
 
-tagline: The Darkest Before Sunrise # it will display as the sub-title
+tagline: |
+  Its' always Darkest before the Dawn
 
 description: >- # used by seo meta and the atom feed
   제가 경험하는 여러가지 경험들을 기록합니다.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ""
+url: "https://CSKIM999.github.io"
 
 github:
   username: CSKIM999 # change to your github username
