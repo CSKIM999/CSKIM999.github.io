@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Modern Javascript Deepdive [ Chapter04 변수 ]
+title: Modern Javascript Deepdive [ Chapter 04 변수 ]
 date: 2023-07-25 01:18 +0900
-description: Typescript Study
+description: JavaScript Study
 category: [Study, Modern Javascript Deepdive]
 tags: Modern-Javascript-Deepdive
 image:
