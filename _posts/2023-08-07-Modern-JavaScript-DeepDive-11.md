@@ -15,7 +15,7 @@ image:
 > 되도록 책의 내용을 그대로 복사해서 붙여넣기보단 개인적으로 인상깊었던 부분을 구어체로 풀어쓰려 노력했습니다.
 {: .prompt-tip}
 
-# [ Chapter 10 ] 객체 리터럴
+# [ Chapter 11 ] 원시 값과 객체의 비교
 
 # Modern JavaScript Deep Dive
 
