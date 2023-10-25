@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modern Javascript Deepdive [ Chapter 13 스코프 ]
+title: Modern Javascript Deepdive [ Chapter 14 스코프 ]
 date: 2023-08-10 10:01 +0900
 description: JavaScript Study
 category: [Study, Modern Javascript Deepdive]
