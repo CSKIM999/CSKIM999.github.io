@@ -15,9 +15,9 @@ export function imgLazy() {
 
   /* Stop shimmer when image loaded */
   document.addEventListener('lazyloaded', function (e) {
-    stopShimmer($(e.target));
+    const $img = $(e.target);
+    $img.parent().removeClass('shimmer');
   });
-
   /* Stop shimmer from cached images */
   $images.each(function () {
     if ($(this).hasClass('ls-is-cached')) {
