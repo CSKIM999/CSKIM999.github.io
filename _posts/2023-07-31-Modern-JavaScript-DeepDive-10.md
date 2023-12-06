@@ -5,7 +5,6 @@ date: 2023-07-31 23:33 +0900
 description: JavaScript Study
 category: [Study, Modern Javascript Deepdive]
 tags: Modern-Javascript-Deepdive
-pin: true
 image:
   path: /assets/img/mjsdd.png
 ---
