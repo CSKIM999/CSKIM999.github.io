@@ -8,81 +8,63 @@ image:
   path: /assets/img/Prettier.png
 ---
 
-# ESLint
+# Prettier
 ## 설정에 앞서
-설정에 앞서 코드의 통일성과 앞으로의 더욱 나은 개발경험을 위해 앞으로의 프로젝트에서 Lint 설정은 어느정도 규격화 된 설정을 만들어두고 그것을 따라 지키도록 할 예정이다.
-나름의 근거를 바탕으로 수행 할 예정이라 다른 협업자가 생기더라도 설득할 수 있으리라 믿는다.
+prettier는 lint 와 함께 **협업** 에서 중요한 역할을 하는 플러그인이다. 
+각자가 작성한 코드를 일정 규칙에 맞춰 포맷팅해주어 서로의 코드 보다 쉽게 이해할 수 있도록 도와주는 플러그인이기 때문에, 절대 정답은 없고 서로의 코드를 잘 이해할 수 있도록 돕는다면 그것이 올바른 사용법이라 믿는다.
 
-CRA는 기본 ESLint 설정이 되어있으나, Vite나 Next.js 의 경우엔 그렇지 않으므로 커스텀 세팅값이 필요하다.
+기본적으로 VSCode에서 Prettier 확장프로그램을 설치하면 지정된 Default 값들이 존재한다. 그것을 건드리지 않고 사용해도 뭐 무방하지만, 우리 팀만의 컨벤션을 만들고싶다면 `.prettierrc.js` 파일을 생성해서 서로 공유하는 게 더 좋을 것이다.
 
-### Airbnb Rule
-사실 ESLint 에서 제공하는 기본 설정값이 있긴 하다. 하지만 우테코에서도 추천하는 컨벤션인 Airbnb 컨벤션을 준수하면 더 좋지 않을까 싶다. 실제로는 기본 설정값 정도만 준수하면 되는 곳이 있을 수 있지만, 느슨하다 빡센 것 보다는 빡센 컨벤션에서 느슨한건 어렵지 않으니까.
+## Prettier 설치
+ESLint 와 Prettier 를 같이 사용하기 위해선 `eslint-config-prettier` 를 사용해야한다.
+`prettier-eslint` 나 `eslint-plugin-prettier` 등이 있지만, Lint와 Prettier 자체에 대한 깊은 이해가 없다면, 대세를 따라가는게 혹시나 생길 이슈에 더 기민하게 대응할 수 있을 것이다.
 
-## ESLint 설치
-### ESLint 설치 with CLI
 ```bash
-npm i eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
+npm i eslint-config-prettier --D
 ```
 
-만약 CRA 같은 CLI를 사용 할 경우 `.eslintrc.json` 을 자동으로 생성해주지만, 그렇지 않은 경우 직접 만들어야 하는 경우가 있다.
-```bash
-$ eslint --init
-```
+이후 `.eslintrc.js` 파일의 extends 에 prettier를 추가해준다.
 
-이후 질문지에 적절하게 답변. 
-내 경우엔
-> How would you like to use ESLint?
-> 2 ) To check syntax and find problems // Prettier 를 사용 할 것이므로 굳이 3번을 선택할 이유 X
-
-> What type of modules does your project use?
-> 1 ) JavaScript modules (import/export) // CommonJS 모듈 쓰는 흑우 없제?
-
-> Which framework does your project use?
-> 1 ) React // React, Next.js 등등 대부분의 프레임워크는 React 기반이라는 점을 명심하자
-
-> Does your project use TypeScript?
-> 2 ) Yes. // YES !
-
-> Where does your code run?
-> 1 ) Browser // 우린 React , Next 등 Browser Script 를 작성할거니까 Browser 선택. 만약 Node.js 에서 실행한다면 2번을 선택하는게 맞다.
-
-> What format do you want your config file to be in?
-> 3 ) JSON // 코드 구성파일을 어떤 파일로 만들 것인가? JS도 있겠지만 나는 JSON이 더 편하다
-
-> Would you like to install them now?
-> Y // 그럼 지금 설치하지 언제 설치해
-
-> Which package manager do you want to use?
-> 1 ) npm // 나는 npm을 사용중이다. yarn도 나중에 써봐야지
-
-### .eslintrc.js
 ```js
-module.exports = {
-	env: {
-		browser: true,
-		es2020: true,
-		node: true,
-	},
-	extends: [
-		"eslint:recommended",
-		"plugin:react/recommended",
-		"plugin:@typescript-eslint/recommended",
-		"airbnb",
-		"prettier"
-	],
-	parser: "@typescript-eslint/parser",
-	parserOptions: {
-		ecmaVersion: "latest",
-		sourceType: "module",
-	},
-	plugins: ["react", "react-hooks", "@typescript-eslint", "prettier"],
-	rules: {
-		"react/react-in-jsx-scope": 0,
-		"react/prefer-stateless-function": 0,
-		"react/jsx-filename-extension": 0,
-		"react/jsx-one-expression-per-line": 0,
-	},
-};
+// .eslintrc.js
+{
+  "extends": [
+    "some-other-config-you-use",
+    // prettier 추가
+    "prettier"
+  ]
+}
 ```
 
-이 정도로 설정하면 내가 원하는 초기세팅이 완료된다.
+
+### 만약 VSCode 를 사용하고있다면
+간단하게 좌측 확장 프로그램에서 Prettier를 검색해서 인증마크가 달린 Prettier를 설치해주면 된다.
+
+이렇게만 하더라도 기본 Default 설정값으로 Prettier가 실행되며, 만약 커스텀하고싶다면 root폴더에 `.prettierrc` json 파일을 만들어서 설정해주어도 된다.
+
+
+### 참고용 .prettierrc 설정값
+```json
+// .prettierrc
+{
+	"arrowParens": "always",
+	"bracketSameLine": false,
+	"bracketSpacing": true,
+	"semi": true,
+	"singleQuote": true,
+	"jsxSingleQuote": true,
+	"quoteProps": "as-needed",
+	"trailingComma": "all",
+	"singleAttributePerLine": false,
+	"htmlWhitespaceSensitivity": "css",
+	"vueIndentScriptAndStyle": false,
+	"proseWrap": "preserve",
+	"insertPragma": false,
+	"printWidth": 80,
+	"tabWidth": 2,
+	"useTabs": true,
+	"embeddedLanguageFormatting": "auto"
+}
+```
+위 설정값들은 직접 하나하나 작성해 줄 수도 있지만, 
+[프리티어 공식 페이지](https://prettier.io/) 에 가서 옵션 하나하나 설정해보고 가장 잘 맞는 값을 export 해올수도 있다.
