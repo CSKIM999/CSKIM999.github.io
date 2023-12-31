@@ -7,8 +7,8 @@ category: [Study, Setting ]
 image:
   path: /assets/img/ESLint.png
 ---
-
-# ESLint
+<!-- TOC TEST -->
+<!-- # ESLint -->
 ## 설정에 앞서
 설정에 앞서 코드의 통일성과 앞으로의 더욱 나은 개발경험을 위해 앞으로의 프로젝트에서 Lint 설정은 어느정도 규격화 된 설정을 만들어두고 그것을 따라 지키도록 할 예정이다.
 나름의 근거를 바탕으로 수행 할 예정이라 다른 협업자가 생기더라도 설득할 수 있으리라 믿는다.
@@ -31,28 +31,28 @@ $ eslint --init
 
 이후 질문지에 적절하게 답변. 
 내 경우엔
-> How would you like to use ESLint?
+> How would you like to use ESLint?  
 > 2 ) To check syntax and find problems // Prettier 를 사용 할 것이므로 굳이 3번을 선택할 이유 X
 
-> What type of modules does your project use?
+> What type of modules does your project use?  
 > 1 ) JavaScript modules (import/export) // CommonJS 모듈 쓰는 흑우 없제?
 
-> Which framework does your project use?
+> Which framework does your project use?  
 > 1 ) React // React, Next.js 등등 대부분의 프레임워크는 React 기반이라는 점을 명심하자
 
-> Does your project use TypeScript?
+> Does your project use TypeScript?  
 > 2 ) Yes. // YES !
 
-> Where does your code run?
+> Where does your code run?  
 > 1 ) Browser // 우린 React , Next 등 Browser Script 를 작성할거니까 Browser 선택. 만약 Node.js 에서 실행한다면 2번을 선택하는게 맞다.
 
-> What format do you want your config file to be in?
+> What format do you want your config file to be in?  
 > 3 ) JSON // 코드 구성파일을 어떤 파일로 만들 것인가? JS도 있겠지만 나는 JSON이 더 편하다
 
-> Would you like to install them now?
+> Would you like to install them now?  
 > Y // 그럼 지금 설치하지 언제 설치해
 
-> Which package manager do you want to use?
+> Which package manager do you want to use?  
 > 1 ) npm // 나는 npm을 사용중이다. yarn도 나중에 써봐야지
 
 ### .eslintrc.js
