@@ -51,7 +51,7 @@ Github Action을 위한 토큰을 발급받는 절차를 페이지별로 구분�
 	2. 이후 해당 토큰을 사용하고자 하는, 현재 Github Action을 붙이고자 하는 Repository로 이동
 	3. Repository 의 Setting으로 이동 후 Secrets and variables 드롭다운 열기
 	4. Actions의 Repository Secrets 블럭의 New reposirory secret 클릭
-	5. 추후에 `github_token: ${{ secrets.토큰이름 }}`처럼 접근할 예정이므로 토큰 이름과 토큰 정보를 기입해준다. 여기서의 `토큰이름` 은 추후에 .yml 파일을 작성할 때 사용된다.
+	5. 추후에 `github_token: $&lbrace;&lbrace; secrets.토큰이름 &rbrace;&rbrace;`처럼 접근할 예정이므로 토큰 이름과 토큰 정보를 기입해준다. 여기서의 `토큰이름` 은 추후에 .yml 파일을 작성할 때 사용된다.
 
 ---
 
