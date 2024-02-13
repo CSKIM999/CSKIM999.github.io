@@ -40,7 +40,7 @@ function printSquare(x) {
 }
 printSquare(5);
 ```
-![Callback](/assets/img/callback.webp){:height='320'}
+![Callstack](/assets/img/callstack.webp){:height='320'}
 
 이미 너무나 간단하고 명확하게 그려진 좋은 설명이미지지만, 글로서 위 코드의 실행순서를 자세하게 설명하자면 다음과 같다.  
 1. multiply와 printSquare 가 정의되고 printSquare(5) 가 실행된다.
