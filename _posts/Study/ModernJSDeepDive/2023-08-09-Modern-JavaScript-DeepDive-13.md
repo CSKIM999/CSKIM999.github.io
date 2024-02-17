@@ -11,11 +11,10 @@ image:
 
 ![DesktopView](/assets/img/mjsdd.png){:width='320'}
 
-> 이 게시물은 SW 마에스트로 연수생 간 진행한 Modern JavaScript DeepDive 스터디의 개인 정리 내용입니다.
-> 되도록 책의 내용을 그대로 복사해서 붙여넣기보단 개인적으로 인상깊었던 부분을 구어체로 풀어쓰려 노력했습니다.
+> 이 게시물은 SW마에스트로 연수생 간 진행한 Modern JavaScript DeepDive 스터디 개인 정리 내용입니다.  
+> 되도록 책의 내용을 그대로 적기보단 개인적으로 인상깊었던 부분을 구어체로 풀어쓰려 노력했습니다.
 {: .prompt-tip}
 
-# [ Chapter 13 ] 스코프
 
 # Modern JavaScript Deep Dive
 
