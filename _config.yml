@@ -35,6 +35,9 @@ github:
 # twitter:
 #   username: CSKIM999 # change to your twitter username
 
+linkedin:
+  username: cskim999 # change to your linkedin username
+
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
@@ -46,7 +49,7 @@ social:
     # - https://twitter.com/CSKIM999 # change to your twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/cskim999
 
 google_site_verification: # fill in to your verification string
 
