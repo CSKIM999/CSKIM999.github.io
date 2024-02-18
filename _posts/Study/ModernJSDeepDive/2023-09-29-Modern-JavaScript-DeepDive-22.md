@@ -201,5 +201,5 @@ bind()를 통해 생성된 함수는 this값이 영구적으로 바인딩되어 
 
 ## 잔뿌리 호기심
 이 글에서 발생한 작은 호기심을 해소하기 위한 글. 당신도 궁금하면 한번 읽어보시라.  
-[잔뿌리 호기심 - 일반함수의 this에는 왜 전역객체가 바인딩될까]()  
-[잔뿌리 호기심 - 다른 4가지 경우에서의 this 바인딩]()  
+[잔뿌리 호기심 - 일반함수의 this에는 왜 전역객체가 바인딩될까](https://cskim999.github.io/posts/%EC%9E%94%EB%BF%8C%EB%A6%AC%ED%98%B8%EA%B8%B0%EC%8B%AC-%EC%9D%BC%EB%B0%98%ED%95%A8%EC%88%98%EC%9D%98-this%EC%97%90%EB%8A%94-%EC%99%9C-%EC%A0%84%EC%97%AD%EA%B0%9D%EC%B2%B4%EA%B0%80-%EB%B0%94%EC%9D%B8%EB%94%A9%EB%90%A0%EA%B9%8C/)  
+[잔뿌리 호기심 - 다른 4가지 경우에서의 this 바인딩](https://cskim999.github.io/posts/%EC%9E%94%EB%BF%8C%EB%A6%AC%ED%98%B8%EA%B8%B0%EC%8B%AC-%EB%8B%A4%EB%A5%B8-4%EA%B0%80%EC%A7%80-%EA%B2%BD%EC%9A%B0%EC%97%90%EC%84%9C%EC%9D%98-this%EB%B0%94%EC%9D%B8%EB%94%A9/)  
