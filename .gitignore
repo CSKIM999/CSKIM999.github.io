@@ -19,5 +19,5 @@ package-lock.json
 .vscode
 
 # Misc
-assets/js/dist
+# assets/js/dist
 2019*.md
