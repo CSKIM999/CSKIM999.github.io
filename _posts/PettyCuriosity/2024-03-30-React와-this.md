@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "[잔뿌리 호기심] React와 this"
-date: 2024-02-18 12:33 +0900
-description: why are global object bound with function call?
+date: 2024-03-30 18:35 +0900
+description: this keyword with React
 category: [Study, PettyCuriosity]
 tags: Origin
 image:
