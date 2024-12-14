@@ -4,6 +4,7 @@ title: 자바스크립트는 동기적 언어인가요?
 date: 2024-02-12 19:12 +0900
 description: TechInterview
 category: [Study,TechInterview]
+pin: true
 tags: Javascript
 image:
   path: /assets/img/TechInterview.webp
